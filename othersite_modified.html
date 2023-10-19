@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>You free thursday?</title>
+        <meta property="og:title" content="You free thursday?">
+        <meta property="og:type" content="video">
+        <meta property="og:url" content="http://h.zipdox.net/thursday/">
+        <meta property="og:image" content="http://h.zipdox.net/thursday/thumbnail.webp">
+        <meta property="og:video" content="https://storage.googleapis.com/vocodes-public/media/k/4/n/v/d/k4nvd6vrwh5dmndrv01k8rd79hhbqkxj/fakeyou_k4nvd6vrwh5dmndrv01k8rd79hhbqkxj.mp4">
+        <meta property="og:video:width" content="3840">
+        <meta property="og:video:height" content="1606">
+        <meta property="og:video:type" content="video/mp4">
+    </head>
+    <body>
+        <video id="embed" src="https://h.zipdox.net/thursday/embed.webm" controls></video>
+        <script>
+            document.getElementById('embed').onerror = function(error){
+                if(navigator.vendor.includes('Apple')){
+                    alert("There was an error playing the video.\n\nMake sure you're using an up-to-date version of Chrome/Chromium or Firefox.\n\nYour browser indicates that it (or its engine) is made by Apple. Safari is not capable of playing this video.");
+                }else{
+                    if(navigator.userAgent.includes('Firefox')){
+                        alert("There was an error playing the video.\n\nMake sure your Firefox is up-to-date and that media.av1.enabled is set to true in about:config.");
+                    }else{
+                        alert("There was an error playing the video.\n\nMake sure you're using an up-to-date version of Chrome/Chromium or Firefox.");
+                    }
+                }
+            }
+        </script>
+        <style>
+            body {
+                margin: 0px;
+                overflow: hidden;
+                background-color: #222;
+            }
+            video {
+                width: 100vw;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 2em #000;
+            }
+            @media (min-aspect-ratio: 3840/1606) {
+                video {
+                    width: auto;
+                    height: 100vh;
+                }
+            }
+        </style>
+    </body>
+</html>
